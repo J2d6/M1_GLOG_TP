@@ -8,6 +8,6 @@ public class Femme extends Humain {
 	public static void main (String[] args) {
 		Homme lehilahy  = new Homme("RAZ", "Dimbiniaina Jordany", 23);
 		Femme vehivavy = new Femme("ZAFY", "Marie ", 24);
-		vehivavy.ami(lehilahy);
+		vehivavy.ami(lehilahy, 34);
 	}
 }

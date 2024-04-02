@@ -1,5 +1,10 @@
 package iut.bad;
 
+
+import java.util.HashMap;
+import java.util.Map;
+
+
 public class Humain implements Consommation {
 	
 	String nom;
@@ -7,8 +12,10 @@ public class Humain implements Consommation {
 	int age;
 	boolean soif;
 	boolean faim;
-	Humain ami;
 	
+	Map<Humain, Integer> amis = new HashMap<>();
+	Humain ami;
+	int dureeeAmitie;
 	
 	public Humain ( String nom, String prenom, int age ) {
 		this.nom = nom;
@@ -33,7 +40,13 @@ public class Humain implements Consommation {
 		this.soif = false;
 	}
 	
+	public void ami ( Humain ami, int dureeAmitie ) {
+		this.amis.put(ami, dureeAmitie) ;
+		ami.amis.put(this, dureeAmitie);
+		System.out.println(this.prenom +" et "+ ami.prenom + " sont désormais amis pour "+ dureeAmitie +" jours");
+		
+	}
 	public void ami ( Humain ami ) {
-		this.ami = ami;
+		this.ami(ami, 100);	
 	}
 }
