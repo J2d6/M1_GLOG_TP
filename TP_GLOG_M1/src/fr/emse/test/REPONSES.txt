@@ -1,0 +1,8 @@
+3 ) Le test échoue car la classe Money n'a pas définit de méthode equals() donc, par défaut en java, la classe Money
+héritera de la méthode equals() de Object qui vérifie sy 2 références(objet) pointe vers le mêm objet.
+			=> assertTrue(expected.equals(result)); 
+			
+			
+			
+4 ) Pour la même raison précédemment, l'assertion " ssertEquals(m12CHF, new Money(12, "CHF"));" échoue aussi car assertEquals utilisera
+la méthode equals() héritée de Object or que cette méthode compare les adresses mais non pas le contenu. 
