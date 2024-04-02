@@ -1,0 +1,4 @@
+9) Si on dépace la méthode toString() dans les classes filles (Homme et Femme), la classe parente Humain utilisera donc
+la méthode toString() héritée de la classe Object (par défaut). Et dans les sous classes, celle héritée de Object sera masquée 
+par celle qui vient d'être définie. On pourra donc personnaliser e fonctionnement de la méthode pour chaque classe.
+
